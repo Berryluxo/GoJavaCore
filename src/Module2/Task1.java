@@ -5,183 +5,158 @@ package Module2;
  */
 public class Task1 {
     public static void main(String[] args) {
-        int[] array = {32, -4, 17, -6, -129, -49, 10, 38, 548, 54};
-        double [] arrayDoub = {52.4, -45.7, 6.7, 155.1, 633.9, -4.6, 7.2, 1.4, -111.5, -0.8};
-        sum(array);
-        sum(arrayDoub);
-        min(array);
-        min(arrayDoub);
-        max(array);
-        max(arrayDoub);
-        maxPositive(array);
-        maxPositive(arrayDoub);
-        multiplication(array);
-        multiplication(arrayDoub);
-        modulus(array);
-        modulus(arrayDoub);
-        secondLargest(array);
-        secondLargest(arrayDoub);
+        int[] array = {32, -4, 17, -6, -129, -49, 10, 38, 548, 22};
+        double[] arrayDoub = {52.4, -45.7, 6.7, 155.1, 633.9, -4.6, 7.2, 1.4, -111.5, -0.8};
+        System.out.println("Sum: " + sum(array));
+        System.out.println("Sum: " + sum(arrayDoub));
+        System.out.println("Min: " + min(array));
+        System.out.println("Min: " + min(arrayDoub));
+        System.out.println("Max: " + max(array));
+        System.out.println("Max: " + max(arrayDoub));
+        System.out.println("Max positive: " + maxPositive(array));
+        System.out.println("Max positive: " + maxPositive(arrayDoub));
+        System.out.println("Multiplication: " + multiplication(array));
+        System.out.println("Multiplication: " + multiplication(arrayDoub));
+        System.out.println("Modulus: " + modulus(array));
+        System.out.println("Modulus: " + modulus(arrayDoub));
+        System.out.println("Second largest: " + secondLargest(array));
+        System.out.println("Second largest: " + secondLargest(arrayDoub));
 
     }
 
     // Calculate sum for int
-    static void sum(int array[]) {
+    static int sum(int array[]) {
         int sumArray = 0;
         for (int sArray : array) {
             sumArray += sArray;
         }
-        System.out.println("Sum: " + sumArray);
+        return sumArray;
     }
+
     // Calculate sum for double
-    static void sum(double arrayDoub[]) {
+    static double sum(double arrayDoub[]) {
         double sumArray = 0;
         for (double sArray : arrayDoub) {
             sumArray += sArray;
         }
-        System.out.println("Sum: " + sumArray);
+        return sumArray;
     }
 
     // Calculate min for int
-    static void min(int array[]) {
+    static int min(int array[]) {
         int min = array[0];
         for (int i = 0; i < array.length; i++) {
-            if (min > array[i])
+            if (min > array[i]) {
                 min = array[i];
+            }
         }
-        System.out.println("Min: " + min);
+        return min;
     }
 
     // Calculate min for double
-    static void min(double arrayDoub[]) {
+    static double min(double arrayDoub[]) {
         double min = arrayDoub[0];
         for (int i = 0; i < arrayDoub.length; i++) {
-            if (min > arrayDoub[i])
+            if (min > arrayDoub[i]) {
                 min = arrayDoub[i];
+            }
         }
-        System.out.println("Min: " + min);
+        return min;
     }
 
     // Calculate max for int
-    static void max(int array[]) {
+    static int max(int array[]) {
         int max = array[0];
         for (int i = 0; i < array.length; i++) {
             if (max < array[i])
                 max = array[i];
         }
-        System.out.println("Max: " + max);
+        return max;
     }
 
     // Calculate max for double
-    static void max(double arrayDoub[]) {
+    static double max(double arrayDoub[]) {
         double max = arrayDoub[0];
         for (int i = 0; i < arrayDoub.length; i++) {
             if (max < arrayDoub[i])
                 max = arrayDoub[i];
         }
-        System.out.println("Max: " + max);
+        return max;
     }
 
     // Calculate max positive for int
-    static void maxPositive(int array[]) {
+    static int maxPositive(int array[]) {
         int maxPositive = 0;
         for (int anArray : array) {
             if (anArray > 0 && maxPositive < anArray)
                 maxPositive = anArray;
         }
-        if (maxPositive > 0)
-            System.out.println("Max positive: " + maxPositive);
-        else
-            System.out.println("There is no positive numbers");
+        return maxPositive;
     }
 
     // Calculate max positive for double
-    static void maxPositive(double arrayDoub[]) {
+    static double maxPositive(double arrayDoub[]) {
         double maxPositive = 0;
         for (double anArray : arrayDoub) {
             if (anArray > 0 && maxPositive < anArray)
                 maxPositive = anArray;
         }
-        if (maxPositive > 0)
-            System.out.println("Max positive: " + maxPositive);
-        else
-            System.out.println("There is no positive numbers");
+        return maxPositive;
     }
 
     // Calculate multiplication for int
-    static void multiplication(int array[]) {
+    static int multiplication(int array[]) {
         int multiplication = 1;
         for (int i = 0; i < array.length; i++) {
             multiplication = multiplication * array[i];
         }
-        System.out.println("Multiplication: " + multiplication);
+        return multiplication;
     }
 
     // Calculate multiplication for double
-    static void multiplication(double arrayDoub[]) {
+    static double multiplication(double arrayDoub[]) {
         double multiplication = 1;
         for (int i = 0; i < arrayDoub.length; i++) {
             multiplication = multiplication * arrayDoub[i];
         }
-        System.out.println("Multiplication: " + multiplication);
+        return multiplication;
     }
 
     // Calculate modulus of first and last element for int
-    static void modulus(int array[]) {
-        int first = array[0];
-        int last = array[array.length - 1];
-        System.out.println("First modulus: " + Math.abs(first));
-        System.out.println("Last modulus: " + Math.abs(last));
+    static int modulus(int array[]) {
+        int modulus = array[0] % array[array.length - 1];
+        return modulus;
     }
 
     // Calculate modulus of first and last element for double
-    static void modulus(double arrayDoub[]) {
-        double first = arrayDoub[0];
-        double last = arrayDoub[arrayDoub.length - 1];
-        System.out.println("First modulus: " + Math.abs(first));
-        System.out.println("Last modulus: " + Math.abs(last));
+    static double modulus(double arrayDoub[]) {
+        double modulus = arrayDoub[0] % arrayDoub[arrayDoub.length - 1];
+        return modulus;
     }
 
     // Calculate second largest element for int
-    static void secondLargest(int array[]) {
-        // bubbleSort
-        for(int i = array.length-1 ; i > 0 ; i--){
-            for(int j = 0 ; j < i ; j++){
-                if( array[j] < array[j+1] ){
-                    int tmp = array[j];
-                    array[j] = array[j+1];
-                    array[j+1] = tmp;
-                }
+    static int secondLargest(int array[]) {
+        int largest = 0;
+        int previousLarger = 0;
+        for (int i = 0; i < array.length; i++) {
+            if (array[i] > largest) {
+                previousLarger = largest;
+                largest = array[i];
             }
         }
-        int secondLargest = array[0];
-        for (int i = 1; i < array.length; i++)
-            if (secondLargest != array[i]){
-                secondLargest = array[i];
-                break;}
-
-
-        System.out.println("Second largest: " + secondLargest);
+        return previousLarger;
     }
 
     // Calculate second largest element for double
-    static void secondLargest(double arrayDoub[]) {
-        // bubbleSort
-        for(int i = arrayDoub.length-1 ; i > 0 ; i--){
-            for(int j = 0 ; j < i ; j++){
-                if( arrayDoub[j] < arrayDoub[j+1] ){
-                    double tmp = arrayDoub[j];
-                    arrayDoub[j] = arrayDoub[j+1];
-                    arrayDoub[j+1] = tmp;
-                }
+    static double secondLargest(double arrayDoub[]) {
+        double largest = 0;
+        double previousLarger = 0;
+        for (int i = 0; i < arrayDoub.length; i++) {
+            if (arrayDoub[i] > largest) {
+                previousLarger = largest;
+                largest = arrayDoub[i];
             }
         }
-        double secondLargest = arrayDoub[0];
-        for (int i = 1; i < arrayDoub.length; i++)
-            if (secondLargest != arrayDoub[i]){
-                secondLargest = arrayDoub[i];
-                break;}
-
-
-        System.out.println("Second largest: " + secondLargest);
+        return previousLarger;
     }
 }
