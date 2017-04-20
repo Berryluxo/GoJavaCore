@@ -1,4 +1,4 @@
-package Offline.Ofline6;
+package Offline.Offline6;
 
 /**
  * Created by Lina.Burkalo on 09.03.2017.

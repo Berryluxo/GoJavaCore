@@ -1,4 +1,4 @@
-package Offline.Ofline6;
+package Offline.Offline6;
 
 import java.util.LinkedList;
 import java.util.List;

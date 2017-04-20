@@ -1,4 +1,4 @@
-package Offline.Ofline6;
+package Offline.Offline6;
 
 import java.util.ArrayList;
 import java.util.List;

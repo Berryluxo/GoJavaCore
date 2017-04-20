@@ -1,13 +1,10 @@
-package Offline.Ofline6;
-
-import java.util.ArrayList;
-import java.util.Collection;
-import java.util.List;
+package Offline.Offline6;
 
 /**
  * Created by Lina.Burkalo on 09.03.2017.
  */
 public class Group {
+    /*
 
     private List<Shape> list = new ArrayList<>();
 
@@ -47,4 +44,5 @@ public class Group {
     public boolean removeAll(Collection c) {
         return false;
     }
+    */
 }
